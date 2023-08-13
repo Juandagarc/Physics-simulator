@@ -1,0 +1,17 @@
+.particles-container {
+    position: relative;
+}
+
+.speed-input {
+    position: relative;
+    color: white;
+    z-index: 100;
+}
+.particles-page{
+    /*Se hace mas pequeño*/
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    background-color: black;
+
+}
