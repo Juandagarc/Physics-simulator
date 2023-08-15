@@ -3,7 +3,7 @@ import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 import "./particles.css";
 
-const ParticlesGas = ({ particleSpeed, onSpeedChange }) => {
+const ParticlesGas = ({ particleSpeed, onSpeedChange, particlesOptions }) => {
     const particlesInit = useCallback(async (engine) => {
         await loadSlim(engine);
     }, []);
@@ -54,13 +54,7 @@ const ParticlesGas = ({ particleSpeed, onSpeedChange }) => {
                             speed: particleSpeed,
                             straight: false,
                         },
-                        number: {
-                            density: {
-                                enable: true,
-                                area: 800,
-                            },
-                            value: 80,
-                        },
+                        number: particlesOptions.number, // Usar la configuración de cantidad de partículas
                         opacity: {
                             value: 0.5,
                         },
